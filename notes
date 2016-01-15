@@ -1,0 +1,36 @@
+https://seanmcgary.com/posts/deploying-a-nodejs-application-using-docker
+
+# docker ls
+# tcp://192.168.99.100:2376
+
+add to ~/.bash_profile: eval "$(docker-machine env default)"
+
+# build image
+docker build -t tasty/my-nodejs-webserver .
+
+# run container
+docker run -p 8181:8181 tasty/my-nodejs-webserver
+
+# this is the docker host?
+# go to tcp://192.168.99.100:8181
+
+
+# docker run -d -p 9500:9200 --name elasticsearch-21 elasticsearch:2.1 -Des.node.name="Node01" -Des.network.host=::0
+# curl -XGET 127.0.0.1:9500
+
+# sudo ufw default deny incoming
+# sudo ufw default allow outgoing
+# sudo ufw allow 9500/tcp
+# sudo ufw allow ssh
+
+
+# docker run  -p 28017:28015 -p 8080:8080 --name some-rethink2 -v "$PWD:/data" -d rethinkdb:2.2.2
+
+
+# docker build -t docker-node:0.1 .
+# docker run -d -p 8282:8181 --name=dockernode docker-node:0.1
+
+
+# docker save hello-docker:0.1 > hello-docker-01.tar
+# docker load < hello-docker-01.tar
+# docker images
