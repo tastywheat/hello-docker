@@ -10,13 +10,13 @@
 
 ### Create image from Dockerfile
 
-docker build -t <your-image-name>:<version> .
+template `docker build -t <your-image-name>:<version> .`
 
 example `docker build -t hello-docker:1.0 .`
 
 ### Run image
 
-docker run -d -p <hostport>:<containerport> --name <containername> <imagename>:<version>
+template `docker run -d -p <hostport>:<containerport> --name <containername> <imagename>:<version>`
 
 example `docker run -d -p 8585:8181 --name hellodocker hello-docker:1.0`
 
