@@ -4,7 +4,7 @@
 
 1. Change git clone line in `start.sh` to your own repo.
 2. Update Dockerfile and change `bitbucket.org` to the hostname of your git provider.
-3. Add your ssh public key (probably ~/.ssh/id_rsa.pub) to the working directory
+3. Add your ssh private key (probably ~/.ssh/id_rsa) to the working directory
 
 ## Building
 
